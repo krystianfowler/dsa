@@ -5,6 +5,6 @@ class Solution:
         citations.sort() # O(nlogn)
         hIdx = 0
         for idx, n in enumerate(citations): # O(n)
-            if len(citations) - idx >= n:
-                hIdx = n
+            if len(citations) - idx <= n:
+                hIdx = max(hIdx,len(citations) - idx)
         return hIdx
