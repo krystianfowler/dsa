@@ -8,7 +8,7 @@ class Solution:
         n1Idx = m - 1
         n2Idx = n - 1
         for i in range(m + n - 1 , -1, -1):
-            if n2Idx < 0 or nums1[n1Idx] > nums2[n2Idx]:
+            if n1Idx >= 0 and (n2Idx < 0 or nums1[n1Idx] > nums2[n2Idx]):
                 nums1[i] = nums1[n1Idx]
                 n1Idx -= 1
             else: 
